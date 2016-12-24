@@ -102,5 +102,5 @@ void %SCENE_NAME::onExit()
 {
 	cocos2d::CCScene::onExit();
 	// Uncomment this if you are using initInputListeners()
-	//releaseInputListeners()
+	//releaseInputListeners();
 }
