@@ -30,6 +30,7 @@ private:
 	virtual void onExit() override;
 
 	void initInputListeners();
+	void releaseInputListeners();
 
 public:
 	//simple creator func

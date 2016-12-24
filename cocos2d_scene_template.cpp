@@ -15,7 +15,8 @@ bool %SCENE_NAME::init()
 		return false;
 	}
 
-	this->scheduleUpdate();
+	// Uncomment this to activate update(float) function
+	//this->scheduleUpdate();
 
 	return true;
 }
@@ -23,7 +24,8 @@ bool %SCENE_NAME::init()
 void %SCENE_NAME::onEnter()
 {
 	cocos2d::CCScene::onEnter();
-	initInputListeners();
+	// Uncomment this to enable mouse and keyboard event listeners
+	//initInputListeners();
 }
 
 void %SCENE_NAME::update(float delta)
@@ -88,9 +90,17 @@ void %SCENE_NAME::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d
 
 }
 
+void %SCENE_NAME::releaseInputListeners()
+{
+	if(this->mouseInputListener != nullptr)
+		_eventDispatcher->removeEventListener(this->mouseInputListener);
+	if(this->keyInputListener != nullptr)
+		_eventDispatcher->removeEventListener(this->keyInputListener);
+}
+
 void %SCENE_NAME::onExit()
 {
 	cocos2d::CCScene::onExit();
-	_eventDispatcher->removeEventListener(this->mouseInputListener);
-	_eventDispatcher->removeEventListener(this->keyInputListener);
+	// Uncomment this if you are using initInputListeners()
+	//releaseInputListeners()
 }
