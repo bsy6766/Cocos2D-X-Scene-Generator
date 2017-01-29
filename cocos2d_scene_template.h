@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 
-class %SCENE_NAME : public cocos2d::CCScene
+class %SCENE_NAME : public cocos2d::Scene
 {
 private:
 	//default constructor

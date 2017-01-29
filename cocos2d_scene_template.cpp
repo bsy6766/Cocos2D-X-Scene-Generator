@@ -10,7 +10,7 @@ USING_NS_CC;
 
 bool %SCENE_NAME::init()
 {
-	if (!CCScene::init())
+	if (!cocos2d::Scene::init())
 	{
 		return false;
 	}
@@ -23,7 +23,7 @@ bool %SCENE_NAME::init()
 
 void %SCENE_NAME::onEnter()
 {
-	cocos2d::CCScene::onEnter();
+	cocos2d::Scene::onEnter();
 	// Uncomment this to enable mouse and keyboard event listeners
 	//initInputListeners();
 }
@@ -100,7 +100,7 @@ void %SCENE_NAME::releaseInputListeners()
 
 void %SCENE_NAME::onExit()
 {
-	cocos2d::CCScene::onExit();
+	cocos2d::Scene::onExit();
 	// Uncomment this if you are using initInputListeners()
 	//releaseInputListeners(); 
 }
